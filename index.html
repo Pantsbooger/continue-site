@@ -30,18 +30,18 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav" id="site-nav">
-      <a href="index.html#games">Games</a>
-      <a href="index.html#movies">Movies</a>
-      <a href="index.html#books">Books</a>
-      <a href="index.html#telly">Telly</a>
-      <a href="index.html#tabletop">Tabletop</a>
+      <a href="index.html?genre=games#games">Games</a>
+      <a href="index.html?genre=movies#browse">Movies</a>
+      <a href="index.html?genre=books#browse">Books</a>
+      <a href="index.html?genre=telly#browse">Telly</a>
+      <a href="index.html?genre=tabletop#browse">Tabletop</a>
       <a href="about.html">About</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero" id="games">
+  <section class="hero" id="games" data-genre="games">
     <div class="wrap">
       <div class="hero-grid">
         <div>
@@ -62,7 +62,7 @@
     </div>
   </section>
 
-  <section class="cards">
+  <section class="cards" id="browse">
     <div class="wrap">
       <div class="browse-bar">
         <p class="section-label" style="border-top:none;padding-top:0;margin:0;">Also this week</p>
@@ -171,11 +171,11 @@
 <footer>
   <div class="wrap">
     <nav>
-      <a href="index.html#games">Games</a>
-      <a href="index.html#movies">Movies</a>
-      <a href="index.html#books">Books</a>
-      <a href="index.html#telly">Telly</a>
-      <a href="index.html#tabletop">Tabletop</a>
+      <a href="index.html?genre=games#games">Games</a>
+      <a href="index.html?genre=movies#browse">Movies</a>
+      <a href="index.html?genre=books#browse">Books</a>
+      <a href="index.html?genre=telly#browse">Telly</a>
+      <a href="index.html?genre=tabletop#browse">Tabletop</a>
       <a href="about.html">About</a>
     </nav>
     <p class="footer-note">&copy; 2026 Continue? &middot; independent, reader and ad supported &middot; <a href="privacy.html">Privacy</a></p>
