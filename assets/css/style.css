@@ -222,6 +222,10 @@ img, svg { max-width: 100%; display: block; }
   line-height: 1.28;
   margin: 0.15rem 0 0;
   text-wrap: balance;
+  min-height: 5.2em; /* reserves space for 4 lines, so the dek below lines up
+                         across cards regardless of how short a headline is */
+  display: flex;
+  align-items: flex-start;
 }
 .card p.dek { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.5; }
 .card a.card-link { text-decoration: none; }
