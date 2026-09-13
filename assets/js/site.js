@@ -227,4 +227,20 @@
   if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paintAll);
   }
+
+  var navToggle = document.querySelector('.nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  if (navToggle && siteNav) {
+    navToggle.addEventListener('click', function () {
+      var open = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!open));
+      siteNav.classList.toggle('is-open', !open);
+    });
+    siteNav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        navToggle.setAttribute('aria-expanded', 'false');
+        siteNav.classList.remove('is-open');
+      }
+    });
+  }
 })();
