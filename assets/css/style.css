@@ -166,10 +166,13 @@ img, svg { max-width: 100%; display: block; }
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
   padding: 0.28rem 0.6rem; border-radius: 3px;
 }
-.tag-news    { background: var(--teal-soft); color: var(--teal); }
-.tag-backlog { background: var(--amber-soft); color: var(--amber); }
-.tag-deals   { background: var(--brick-soft); color: var(--brick); }
-.tag-cosy    { background: var(--teal-soft); color: var(--teal); }
+/* tag colour follows genre; the label text carries News/Review, so no
+   separate content-type classes are needed */
+.tag-games    { background: var(--amber-soft); color: var(--amber); }
+.tag-tabletop { background: var(--amber-soft); color: var(--amber); }
+.tag-movies   { background: var(--brick-soft); color: var(--brick); }
+.tag-telly    { background: var(--brick-soft); color: var(--brick); }
+.tag-books    { background: var(--teal-soft); color: var(--teal); }
 
 /* ---------- hero ---------- */
 .hero { padding: clamp(2.5rem, 5vw, 4rem) 0 2.5rem; }
@@ -313,3 +316,5 @@ footer nav a:hover { color: var(--ink); }
 .inline-image { margin: 2.5rem 0; }
 .inline-image canvas { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; box-shadow: 0 10px 24px -8px var(--shadow); }
 .inline-image figcaption { margin-top: 0.65rem; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); text-align: center; }
+.inline-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px -8px var(--shadow); }
+.inline-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
