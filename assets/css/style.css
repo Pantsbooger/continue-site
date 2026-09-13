@@ -12,6 +12,13 @@
   font-display: swap;
   src: url('../fonts/nunito-italic.woff') format('woff');
 }
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/nunito-italic-900.woff') format('woff');
+}
 
 :root {
   --paper: #ffffff;
@@ -102,7 +109,7 @@ img, svg { max-width: 100%; display: block; }
 .logo-block { display: flex; flex-direction: column; gap: 0.35rem; }
 .logo {
   font-family: 'Nunito', sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   font-style: italic;
   font-size: 2.1rem;
   line-height: 1;
