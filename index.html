@@ -64,27 +64,48 @@
 
   <section class="cards">
     <div class="wrap">
-      <p class="section-label">Also this week</p>
-      <div class="cards-grid">
-        <div class="card">
-          <a class="card-link" href="articles/witcher-3-switch-2-remaster.html">
-            <canvas class="card-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--brick" data-photo="assets/images/witcher-hero.jpg"></canvas>
-          </a>
-          <p class="card-credit">Image: CD PROJEKT RED</p>
-          <span class="tag tag-games">Games News</span>
-          <h3><a class="card-link" href="articles/witcher-3-switch-2-remaster.html">Good news: you're not late to The Witcher 3, whatever you're playing it on</a></h3>
-          <p class="dek">A free remaster lands on every platform on 29 September, with a new expansion already confirmed for 2027.</p>
+      <div class="browse-bar">
+        <p class="section-label" style="border-top:none;padding-top:0;margin:0;">Also this week</p>
+        <div class="browse-controls">
+          <label class="visually-hidden" for="article-search">Search articles</label>
+          <input type="search" id="article-search" placeholder="Search articles&hellip;" autocomplete="off" />
+          <label class="visually-hidden" for="genre-filter">Filter by genre</label>
+          <select id="genre-filter">
+            <option value="all">All genres</option>
+            <option value="games">Games</option>
+            <option value="movies">Movies</option>
+            <option value="books">Books</option>
+            <option value="telly">Telly</option>
+            <option value="tabletop">Tabletop</option>
+          </select>
+          <label class="visually-hidden" for="sort-order">Sort order</label>
+          <select id="sort-order">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
         </div>
-        <div class="card">
-          <a class="card-link" href="articles/switch-2-update-vrr-sale.html">
-            <canvas class="card-art retro-art" aria-hidden="true" data-icon="tv" data-from="--teal" data-to="--ink" data-photo="assets/images/switch2.jpg"></canvas>
+      </div>
+      <p class="browse-empty" id="browse-empty" hidden>Nothing matches that search, try a different term or genre.</p>
+      <div class="cards-grid" id="cards-grid">
+        <div class="card" data-date="2026-09-13T17:41" data-genre="games">
+          <a class="card-link" href="articles/my-life-through-gaming.html">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="controller" data-from="--amber" data-to="--ink" data-photo="assets/images/zelda-ocarina-of-time-switch2.jpg"></canvas>
           </a>
           <p class="card-credit">Image: Nintendo</p>
-          <span class="tag tag-games">Games News</span>
-          <h3><a class="card-link" href="articles/switch-2-update-vrr-sale.html">Switch 2 just got smoother, and Nintendo picked a suspiciously good time for a sale</a></h3>
-          <p class="dek">A firmware update finally sorts out screen tearing in docked mode.</p>
+          <span class="tag tag-games">Games</span>
+          <h3><a class="card-link" href="articles/my-life-through-gaming.html">My life through gaming, one console at a time</a></h3>
+          <p class="dek">From a surprise VIC-20 to a Switch 2, a personal history told through the machines and the games that came with them.</p>
         </div>
-        <div class="card">
+        <div class="card" data-date="2026-09-13T10:00" data-genre="games">
+          <a class="card-link" href="articles/world-of-warcraft-forever.html">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="controller" data-from="--amber" data-to="--ink" data-photo="assets/images/wow-forever-collectors-statue.jpg"></canvas>
+          </a>
+          <p class="card-credit">Image: Blizzard Entertainment</p>
+          <span class="tag tag-games">Games News</span>
+          <h3><a class="card-link" href="articles/world-of-warcraft-forever.html">World of Warcraft Forever is real, and yes, the name is doing a lot of heavy lifting</a></h3>
+          <p class="dek">Blizzard's reimagined take on Classic WoW launches in November, two decades of hindsight applied to the original zones.</p>
+        </div>
+        <div class="card" data-date="2026-09-13T09:00" data-genre="games">
           <a class="card-link" href="articles/halloween-switch-2-horror-2026.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="ticket" data-from="--brick" data-to="--ink" data-photo="assets/images/re2-deluxe.jpg"></canvas>
           </a>
@@ -93,7 +114,7 @@
           <h3><a class="card-link" href="articles/halloween-switch-2-horror-2026.html">Switch 2's October is stacked with horror, here's how much of it you can actually handle</a></h3>
           <p class="dek">From Pinhead to zombies, a rough guide to this month's frights and how many nightmares each one comes with.</p>
         </div>
-        <div class="card">
+        <div class="card" data-date="2026-09-13T09:01" data-genre="games">
           <a class="card-link" href="articles/cosy-games-watering-plants.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="plant" data-from="--teal" data-to="--teal-soft" data-photo="assets/images/stardew-valley.jpg"></canvas>
           </a>
@@ -102,14 +123,23 @@
           <h3><a class="card-link" href="articles/cosy-games-watering-plants.html">Nine games for when you just want to water some digital plants</a></h3>
           <p class="dek">No boss fights, no timers, no shouting. Just vibes and crops.</p>
         </div>
-        <div class="card">
-          <a class="card-link" href="articles/world-of-warcraft-forever.html">
-            <canvas class="card-art retro-art" aria-hidden="true" data-icon="controller" data-from="--amber" data-to="--ink" data-photo="assets/images/wow-forever-collectors-statue.jpg"></canvas>
+        <div class="card" data-date="2026-09-12T22:43" data-genre="games">
+          <a class="card-link" href="articles/switch-2-update-vrr-sale.html">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="tv" data-from="--teal" data-to="--ink" data-photo="assets/images/switch2.jpg"></canvas>
           </a>
-          <p class="card-credit">Image: Blizzard Entertainment</p>
+          <p class="card-credit">Image: Nintendo</p>
           <span class="tag tag-games">Games News</span>
-          <h3><a class="card-link" href="articles/world-of-warcraft-forever.html">World of Warcraft Forever is real, and yes, the name is doing a lot of heavy lifting</a></h3>
-          <p class="dek">Blizzard's reimagined take on Classic WoW launches in November, two decades of hindsight applied to the original zones.</p>
+          <h3><a class="card-link" href="articles/switch-2-update-vrr-sale.html">Switch 2 just got smoother, and Nintendo picked a suspiciously good time for a sale</a></h3>
+          <p class="dek">A firmware update finally sorts out screen tearing in docked mode.</p>
+        </div>
+        <div class="card" data-date="2026-09-12T22:42" data-genre="games">
+          <a class="card-link" href="articles/witcher-3-switch-2-remaster.html">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--brick" data-photo="assets/images/witcher-hero.jpg"></canvas>
+          </a>
+          <p class="card-credit">Image: CD PROJEKT RED</p>
+          <span class="tag tag-games">Games News</span>
+          <h3><a class="card-link" href="articles/witcher-3-switch-2-remaster.html">Good news: you're not late to The Witcher 3, whatever you're playing it on</a></h3>
+          <p class="dek">A free remaster lands on every platform on 29 September, with a new expansion already confirmed for 2027.</p>
         </div>
       </div>
     </div>
@@ -144,5 +174,6 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
+<script src="assets/js/browse.js"></script>
 </body>
 </html>

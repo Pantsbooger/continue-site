@@ -101,10 +101,26 @@ img, svg { max-width: 100%; display: block; }
 }
 
 /* ---------- masthead ---------- */
-.masthead { border-bottom: 1px solid var(--line); }
+/* Masthead is deliberately always dark, independent of the light/dark
+   theme tokens below, so it reads as a fixed brand banner either way. */
+.masthead {
+  background: #1c231f;
+  border-bottom: 1px solid #1c231f;
+}
 .masthead .wrap {
   display: flex; align-items: baseline; justify-content: space-between;
   flex-wrap: wrap; gap: 0.75rem 2rem; padding-top: 2.25rem; padding-bottom: 1.5rem;
+}
+.masthead .logo { color: #f7f6f4; }
+.masthead .tagline { color: rgba(247,246,244,0.62); }
+.masthead .site-nav a { color: #f7f6f4; }
+.masthead .nav-toggle span { background: #f7f6f4; }
+@media (max-width: 700px) {
+  .masthead .site-nav {
+    background: #1c231f;
+    border-color: rgba(247,246,244,0.15);
+  }
+  .masthead .site-nav a { border-bottom-color: rgba(247,246,244,0.15); }
 }
 .logo-block { display: flex; flex-direction: column; gap: 0.35rem; }
 .logo {
@@ -212,6 +228,29 @@ img, svg { max-width: 100%; display: block; }
 .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; }
 @media (max-width: 900px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards-grid { grid-template-columns: 1fr; } }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+}
+.browse-bar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: 0.75rem 1.5rem; border-top: 1px solid var(--line); padding-top: 0.9rem; margin: 0 0 1.5rem;
+}
+.browse-controls { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.browse-controls input,
+.browse-controls select {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper-raised);
+  color: var(--ink);
+}
+.browse-controls input { width: 200px; max-width: 45vw; }
+.browse-controls input:focus-visible,
+.browse-controls select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.browse-empty { color: var(--ink-soft); font-size: 0.95rem; padding: 1rem 0; }
 .card { display: flex; flex-direction: column; gap: 0.7rem; }
 .card-art { overflow: hidden; display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; box-shadow: 0 10px 24px -8px var(--shadow); }
 .card-credit { margin: 0; font-size: 0.72rem; color: var(--ink-soft); opacity: 0.75; }
