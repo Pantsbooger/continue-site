@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /staging/
 
 Sitemap: https://continueyesno.co.uk/sitemap.xml
