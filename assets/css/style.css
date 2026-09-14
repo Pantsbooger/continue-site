@@ -181,9 +181,12 @@ img, svg { max-width: 100%; display: block; }
   font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
   padding: 0.28rem 0.6rem; border-radius: 3px;
+  text-decoration: none;
 }
-/* tag colour follows genre; the label text carries News/Review, so no
-   separate content-type classes are needed */
+/* tags are links through to articles.html, filtered to that genre+type */
+.tag:hover, .tag:focus-visible { text-decoration: underline; }
+/* tag colour follows genre; the label text carries News/Review/Feature, so
+   no separate content-type classes are needed */
 .tag-games    { background: var(--amber-soft); color: var(--amber); }
 .tag-tabletop { background: var(--amber-soft); color: var(--amber); }
 .tag-movies   { background: var(--brick-soft); color: var(--brick); }

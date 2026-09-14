@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Continue? — games, books, movies, telly and board games for people with actual lives</title>
-<meta name="description" content="News and recommendations on games (Switch, Xbox, PC, mobile, all of it), books, TV, film and board games, for people who don't have time to keep up." />
+<title>All articles — Continue?</title>
+<meta name="description" content="Every article on Continue?, across games, books, movies, telly and board games, filterable by genre and by news, review or feature." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Continue?" />
-<meta property="og:title" content="Continue? — games, books, movies, telly and board games for people with actual lives" />
-<meta property="og:description" content="News and recommendations on games, books, TV, film and board games, for people who don't have time to keep up." />
-<meta property="og:url" content="https://pantsbooger.github.io/continue-site/" />
+<meta property="og:title" content="All articles — Continue?" />
+<meta property="og:description" content="Every article on Continue?, across games, books, movies, telly and board games, filterable by genre and by news, review or feature." />
+<meta property="og:url" content="https://pantsbooger.github.io/continue-site/articles.html" />
 <meta property="og:image" content="https://pantsbooger.github.io/continue-site/assets/images/kallax-storageborn-trailer.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Continue? — games, books, movies, telly and board games for people with actual lives" />
-<meta name="twitter:description" content="News and recommendations on games, books, TV, film and board games, for people who don't have time to keep up." />
+<meta name="twitter:title" content="All articles — Continue?" />
+<meta name="twitter:description" content="Every article on Continue?, across games, books, movies, telly and board games, filterable by genre and by news, review or feature." />
 <meta name="twitter:image" content="https://pantsbooger.github.io/continue-site/assets/images/kallax-storageborn-trailer.jpg" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕹️</text></svg>" />
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -43,31 +43,17 @@
 </header>
 
 <main>
-  <section class="hero" id="games" data-genre="games">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <a class="tag tag-games" href="articles.html?genre=games&amp;type=news">Games News</a>
-          <a class="hero-title" href="articles/skyrim-kallax-storageborn-mod.html">
-            <h1>IKEA turned a shelf into a Skyrim companion, and now I sort of want to play Skyrim</h1>
-          </a>
-          <p class="dek">Kallax Storageborn is a real, free, Matt Berry voiced mod, and a perfect example of nerd rabbit holes in action.</p>
-          <p class="meta-line">Ant<span class="dot">&middot;</span>13 September 2026<span class="dot">&middot;</span>4 min read</p>
-        </div>
-        <div class="hero-art-col">
-          <a href="articles/skyrim-kallax-storageborn-mod.html">
-            <canvas class="hero-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--ink" data-photo="assets/images/kallax-storageborn-trailer.jpg"></canvas>
-          </a>
-          <p class="card-credit">Image: IKEA / Bethesda</p>
-        </div>
-      </div>
+  <article class="article-header">
+    <div class="article-wrap">
+      <h1>All articles</h1>
+      <p class="dek">Everything on Continue?, in one place. Filter by genre or by news, review and feature to find what you're after.</p>
     </div>
-  </section>
+  </article>
 
   <section class="cards" id="browse">
     <div class="wrap">
       <div class="browse-bar">
-        <p class="section-label" style="border-top:none;padding-top:0;margin:0;">Also this week</p>
+        <p class="section-label" style="border-top:none;padding-top:0;margin:0;">Every article</p>
         <div class="browse-controls">
           <label class="visually-hidden" for="article-search">Search articles</label>
           <input type="search" id="article-search" placeholder="Search articles&hellip;" autocomplete="off" />
@@ -80,6 +66,13 @@
             <option value="telly">Telly</option>
             <option value="tabletop">Tabletop</option>
           </select>
+          <label class="visually-hidden" for="type-filter">Filter by type</label>
+          <select id="type-filter">
+            <option value="all">News, reviews and features</option>
+            <option value="news">News</option>
+            <option value="review">Reviews</option>
+            <option value="feature">Features</option>
+          </select>
           <label class="visually-hidden" for="sort-order">Sort order</label>
           <select id="sort-order">
             <option value="newest">Newest first</option>
@@ -87,9 +80,18 @@
           </select>
         </div>
       </div>
-      <p class="browse-empty" id="browse-empty" hidden>Nothing matches that search, try a different term or genre.</p>
-      <div class="cards-grid" id="cards-grid">
-        <div class="card" data-date="2026-09-13T18:30" data-genre="movies">
+      <p class="browse-empty" id="archive-empty" hidden>Nothing matches that search, try a different term, genre or type.</p>
+      <div class="cards-grid" id="archive-grid">
+        <div class="card" data-date="2026-09-13T19:00" data-genre="games" data-type="news">
+          <a class="card-link" href="articles/skyrim-kallax-storageborn-mod.html">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--ink" data-photo="assets/images/kallax-storageborn-trailer.jpg"></canvas>
+          </a>
+          <p class="card-credit">Image: IKEA / Bethesda</p>
+          <a class="tag tag-games" href="articles.html?genre=games&amp;type=news">Games News</a>
+          <h3><a class="card-link" href="articles/skyrim-kallax-storageborn-mod.html">IKEA turned a shelf into a Skyrim companion, and now I sort of want to play Skyrim</a></h3>
+          <p class="dek">Kallax Storageborn is a real, free, Matt Berry voiced mod, and a perfect example of nerd rabbit holes in action.</p>
+        </div>
+        <div class="card" data-date="2026-09-13T18:30" data-genre="movies" data-type="review">
           <a class="card-link" href="articles/oasis-dont-look-back-in-anger-review.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="ticket" data-from="--brick" data-to="--ink" data-photo="assets/images/oasis-dont-look-back-trailer.jpg"></canvas>
           </a>
@@ -98,7 +100,7 @@
           <h3><a class="card-link" href="articles/oasis-dont-look-back-in-anger-review.html">Oasis: Don't Look Back in Anger review: I went in cynical, I came out singing in the car</a></h3>
           <p class="dek">The reunion documentary I was fully prepared to write off as a cash-in turned out to be a genuinely moving redemption story.</p>
         </div>
-        <div class="card" data-date="2026-09-13T17:41" data-genre="games">
+        <div class="card" data-date="2026-09-13T17:41" data-genre="games" data-type="feature">
           <a class="card-link" href="articles/my-life-through-gaming.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="controller" data-from="--amber" data-to="--ink" data-photo="assets/images/zelda-ocarina-of-time-switch2.jpg"></canvas>
           </a>
@@ -107,7 +109,7 @@
           <h3><a class="card-link" href="articles/my-life-through-gaming.html">My life through gaming, one console at a time</a></h3>
           <p class="dek">From a surprise VIC-20 to a Switch 2, a personal history told through the machines and the games that came with them.</p>
         </div>
-        <div class="card" data-date="2026-09-13T10:00" data-genre="games">
+        <div class="card" data-date="2026-09-13T10:00" data-genre="games" data-type="news">
           <a class="card-link" href="articles/world-of-warcraft-forever.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="controller" data-from="--amber" data-to="--ink" data-photo="assets/images/wow-forever-collectors-statue.jpg"></canvas>
           </a>
@@ -116,7 +118,7 @@
           <h3><a class="card-link" href="articles/world-of-warcraft-forever.html">World of Warcraft Forever is real, and yes, the name is doing a lot of heavy lifting</a></h3>
           <p class="dek">Blizzard's reimagined take on Classic WoW launches in November, two decades of hindsight applied to the original zones.</p>
         </div>
-        <div class="card" data-date="2026-09-13T09:00" data-genre="games">
+        <div class="card" data-date="2026-09-13T09:00" data-genre="games" data-type="news">
           <a class="card-link" href="articles/halloween-switch-2-horror-2026.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="ticket" data-from="--brick" data-to="--ink" data-photo="assets/images/re2-deluxe.jpg"></canvas>
           </a>
@@ -125,7 +127,7 @@
           <h3><a class="card-link" href="articles/halloween-switch-2-horror-2026.html">Switch 2's October is stacked with horror, here's how much of it you can actually handle</a></h3>
           <p class="dek">From Pinhead to zombies, a rough guide to this month's frights and how many nightmares each one comes with.</p>
         </div>
-        <div class="card" data-date="2026-09-13T09:01" data-genre="games">
+        <div class="card" data-date="2026-09-13T09:01" data-genre="games" data-type="feature">
           <a class="card-link" href="articles/cosy-games-watering-plants.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="plant" data-from="--teal" data-to="--teal-soft" data-photo="assets/images/stardew-valley.jpg"></canvas>
           </a>
@@ -134,7 +136,7 @@
           <h3><a class="card-link" href="articles/cosy-games-watering-plants.html">Nine games for when you just want to water some digital plants</a></h3>
           <p class="dek">No boss fights, no timers, no shouting. Just vibes and crops.</p>
         </div>
-        <div class="card" data-date="2026-09-12T22:43" data-genre="games">
+        <div class="card" data-date="2026-09-12T22:43" data-genre="games" data-type="news">
           <a class="card-link" href="articles/switch-2-update-vrr-sale.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="tv" data-from="--teal" data-to="--ink" data-photo="assets/images/switch2.jpg"></canvas>
           </a>
@@ -143,7 +145,7 @@
           <h3><a class="card-link" href="articles/switch-2-update-vrr-sale.html">Switch 2 just got smoother, and Nintendo picked a suspiciously good time for a sale</a></h3>
           <p class="dek">A firmware update finally sorts out screen tearing in docked mode.</p>
         </div>
-        <div class="card" data-date="2026-09-12T22:42" data-genre="games">
+        <div class="card" data-date="2026-09-12T22:42" data-genre="games" data-type="news">
           <a class="card-link" href="articles/witcher-3-switch-2-remaster.html">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--brick" data-photo="assets/images/witcher-hero.jpg"></canvas>
           </a>
@@ -152,19 +154,6 @@
           <h3><a class="card-link" href="articles/witcher-3-switch-2-remaster.html">Good news: you're not late to The Witcher 3, whatever you're playing it on</a></h3>
           <p class="dek">A free remaster lands on every platform on 29 September, with a new expansion already confirmed for 2027.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="deals-strip">
-        <div>
-          <p class="eyebrow" style="color:var(--brick)">Ends 26 September</p>
-          <h4>Switch 2 sale is on now</h4>
-          <p>Up to 30% off games and accessories for a fortnight.</p>
-        </div>
-        <a class="btn" href="articles/switch-2-update-vrr-sale.html">Read the roundup</a>
       </div>
     </div>
   </section>
@@ -187,6 +176,6 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
-<script src="assets/js/browse.js"></script>
+<script src="assets/js/archive.js"></script>
 </body>
 </html>
