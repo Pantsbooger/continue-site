@@ -297,6 +297,12 @@ img, svg { max-width: 100%; display: block; }
    whichever is later in the file wins regardless of the media query.) */
 @media (max-width: 560px) {
   .card h2 { font-size: 1.45rem; line-height: 1.24; }
+  /* min-height: 5.2em on the base rule reserves room for a 4-line headline
+     so deks line up across cards sitting side by side in the desktop grid.
+     Once the grid drops to one column here, there's nothing beside a card
+     to line up with, so a short headline was leaving a big dead gap before
+     its own dek - drop the reservation entirely at this width. */
+  .card h2 { min-height: 0; }
 }
 
 /* ---------- deals strip ---------- */
