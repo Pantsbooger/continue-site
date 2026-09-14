@@ -398,6 +398,7 @@ footer nav a:hover { color: var(--ink); }
 }
 .verdict-answer.yes { color: var(--amber); }
 .verdict-answer.no { color: var(--brick); }
+.verdict-answer.maybe { color: var(--teal); }
 .verdict-reason { font-size: 0.94rem; line-height: 1.55; color: var(--ink); margin: 0; }
 
 .end-note {
