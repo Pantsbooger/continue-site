@@ -31,7 +31,7 @@
     </button>
     <nav class="site-nav" id="site-nav">
       <a href="index.html">All</a>
-      <a href="index.html?genre=games#games">Games</a>
+      <a href="index.html?genre=games#browse">Games</a>
       <a href="index.html?genre=movies#browse">Movies</a>
       <a href="index.html?genre=books#browse">Books</a>
       <a href="index.html?genre=telly#browse">Telly</a>
@@ -43,22 +43,22 @@
 </header>
 
 <main>
-  <section class="hero" id="games" data-genre="games">
+  <section class="hero" id="hero" data-genre="telly">
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <a class="tag tag-games" href="articles.html?genre=games&amp;type=news">Games News</a>
-          <a class="hero-title" href="articles/skyrim-kallax-storageborn-mod.html">
-            <h1>IKEA turned a shelf into a Skyrim companion, and now I sort of want to play Skyrim</h1>
+          <a class="tag tag-telly" href="articles.html?genre=telly&amp;type=review">Telly Review</a>
+          <a class="hero-title" href="articles/snl-uk-season-2-premiere-review.html">
+            <h1>Saturday Night Live UK series 2 premiere review: more hit than miss, and Jeff Goldblum can actually sing</h1>
           </a>
-          <p class="dek">Kallax Storageborn is a real, free, Matt Berry voiced mod, and a perfect example of nerd rabbit holes in action.</p>
-          <p class="meta-line">Clarkey<span class="dot">&middot;</span>13 September 2026<span class="dot">&middot;</span>4 min read</p>
+          <p class="dek">George Fouracres retired his Keir Starmer for a new prime minister impression, CMAT's set was the best ten minutes of the night, and Weekend Update finally found its rhythm.</p>
+          <p class="meta-line">Clarkey<span class="dot">&middot;</span>14 September 2026<span class="dot">&middot;</span>4 min read</p>
         </div>
         <div class="hero-art-col">
-          <a href="articles/skyrim-kallax-storageborn-mod.html" aria-hidden="true" tabindex="-1">
-            <canvas class="hero-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--ink" data-photo="assets/images/kallax-storageborn-trailer.jpg"></canvas>
+          <a href="articles/snl-uk-season-2-premiere-review.html" aria-hidden="true" tabindex="-1">
+            <canvas class="hero-art retro-art" aria-hidden="true" data-icon="tv" data-from="--brick" data-to="--ink" data-photo="assets/images/snl-uk-goldblum-cmat-premiere.jpg"></canvas>
           </a>
-          <p class="card-credit">Image: IKEA / Bethesda</p>
+          <p class="card-credit">Image: Sky</p>
         </div>
       </div>
     </div>
@@ -89,6 +89,15 @@
       </div>
       <p class="browse-empty" id="browse-empty" hidden>Nothing matches that search, try a different term or genre.</p>
       <div class="cards-grid" id="cards-grid">
+        <div class="card" data-date="2026-09-13T19:00" data-genre="games">
+          <a class="card-link" href="articles/skyrim-kallax-storageborn-mod.html" aria-hidden="true" tabindex="-1">
+            <canvas class="card-art retro-art" aria-hidden="true" data-icon="cartridge" data-from="--amber" data-to="--ink" data-photo="assets/images/kallax-storageborn-trailer.jpg"></canvas>
+          </a>
+          <p class="card-credit">Image: IKEA / Bethesda</p>
+          <a class="tag tag-games" href="articles.html?genre=games&amp;type=news">Games News</a>
+          <h2><a class="card-link" href="articles/skyrim-kallax-storageborn-mod.html">IKEA turned a shelf into a Skyrim companion, and now I sort of want to play Skyrim</a></h2>
+          <p class="dek">Kallax Storageborn is a real, free, Matt Berry voiced mod, and a perfect example of nerd rabbit holes in action.</p>
+        </div>
         <div class="card" data-date="2026-09-13T18:30" data-genre="movies">
           <a class="card-link" href="articles/oasis-dont-look-back-in-anger-review.html" aria-hidden="true" tabindex="-1">
             <canvas class="card-art retro-art" aria-hidden="true" data-icon="ticket" data-from="--brick" data-to="--ink" data-photo="assets/images/oasis-dont-look-back-trailer.jpg"></canvas>
@@ -174,7 +183,7 @@
   <div class="wrap">
     <nav>
       <a href="index.html">All</a>
-      <a href="index.html?genre=games#games">Games</a>
+      <a href="index.html?genre=games#browse">Games</a>
       <a href="index.html?genre=movies#browse">Movies</a>
       <a href="index.html?genre=books#browse">Books</a>
       <a href="index.html?genre=telly#browse">Telly</a>
