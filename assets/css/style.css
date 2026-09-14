@@ -256,7 +256,10 @@ img, svg { max-width: 100%; display: block; }
 .browse-empty { color: var(--ink-soft); font-size: 0.95rem; padding: 1rem 0; }
 .card { display: flex; flex-direction: column; gap: 0.7rem; }
 .card-art { overflow: hidden; display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; box-shadow: 0 10px 24px -8px var(--shadow); }
-.card-credit { margin: 0; font-size: 0.72rem; color: var(--ink-soft); opacity: 0.75; }
+.card-credit {
+  margin: 0; font-size: 0.72rem; color: var(--ink-soft); opacity: 0.75;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .card h3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
