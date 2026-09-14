@@ -16,7 +16,7 @@
   var validGenres = ['all', 'games', 'movies', 'books', 'telly', 'tabletop'];
 
   function cardText(card) {
-    var heading = card.querySelector('h3');
+    var heading = card.querySelector('h2');
     var dek = card.querySelector('p.dek');
     return ((heading ? heading.textContent : '') + ' ' + (dek ? dek.textContent : '')).toLowerCase();
   }
