@@ -118,7 +118,7 @@ img, svg { max-width: 100%; display: block; }
    theme tokens below, so it reads as a fixed brand banner either way. */
 .masthead {
   background: #1c231f url('../images/masthead-pattern.svg') repeat;
-  background-size: 220px 160px;
+  background-size: 320px 190px;
   border-bottom: 1px solid #1c231f;
 }
 .masthead .wrap {
