@@ -2,94 +2,99 @@
   <!-- Wallpaper of the site's own genres, hand-drawn in the same line-art
        style as the card icons in assets/js/site.js (drawIcon). Dark grey
        on the masthead's near-black background, tiled via CSS
-       background-repeat - texture, not artwork. Every shape here is
-       original geometry, not a reproduction of any specific game's
-       character or asset (no Pac-Man ghost proportions, no actual
-       Space Invaders sprite, no real book titles) - generic genre
-       icons only, same principle as the site's own image-sourcing
-       policy applied to decoration instead of photos. -->
+       background-repeat - texture, not artwork. Every shape is original
+       geometry, not a reproduction of any specific game's character or
+       asset - generic genre icons only, same principle as the site's own
+       image-sourcing policy applied to decoration instead of photos.
+       Packed dense on purpose, per Ant's steer after seeing a reference:
+       16 full icons plus small star/heart/gem/shield/mini accents
+       filling the gaps between them, some overlapping slightly. -->
+  <defs>
+    <g id="star"><path d="M0,-6 L1.3,-1.3 L6,0 L1.3,1.3 L0,6 L-1.3,1.3 L-6,0 L-1.3,-1.3 Z" fill="#3a423c" stroke="none"/></g>
+    <g id="heart"><path d="M0,5 C-6,-1 -6,-6 -2,-6 C0,-6 0,-4 0,-3 C0,-4 0,-6 2,-6 C6,-6 6,-1 0,5 Z" fill="none" stroke="#3a423c" stroke-width="1.4" stroke-linejoin="round"/></g>
+    <g id="gem"><g fill="none" stroke="#3a423c" stroke-width="1.4" stroke-linejoin="round"><polygon points="0,-7 5,-2 3,6 -3,6 -5,-2"/><line x1="-5" y1="-2" x2="5" y2="-2"/><line x1="-3" y1="6" x2="0" y2="-2"/><line x1="3" y1="6" x2="0" y2="-2"/></g></g>
+    <g id="shield"><g fill="none" stroke="#3a423c" stroke-width="1.4" stroke-linejoin="round"><path d="M0,-8 L7,-5 L7,2 Q7,8 0,11 Q-7,8 -7,2 L-7,-5 Z"/><line x1="0" y1="-8" x2="0" y2="11"/></g></g>
+  </defs>
+
   <g fill="none" stroke="#3a423c" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
 
-    <!-- row 1 -->
-    <!-- controller (games) -->
-    <g transform="translate(24,24)">
+    <!-- row 1: main icons -->
+    <g transform="translate(24,24)"> <!-- controller -->
       <rect x="-14" y="-6" width="28" height="14" rx="6"/>
       <circle cx="8" cy="-2" r="1.6" fill="#3a423c" stroke="none"/>
       <circle cx="11" cy="2" r="1.6" fill="#3a423c" stroke="none"/>
       <line x1="-9" y1="-3" x2="-9" y2="3"/>
       <line x1="-12" y1="0" x2="-6" y2="0"/>
     </g>
-    <!-- mushroom (games) -->
-    <g transform="translate(76,16) rotate(-4)">
+    <g transform="translate(76,16) rotate(-4)"> <!-- mushroom -->
       <path d="M-10,2 A10,8 0 0 1 10,2 Z" fill="#3a423c" stroke="none"/>
       <rect x="-4" y="2" width="8" height="9" rx="2"/>
       <circle cx="-4" cy="-2" r="1.2" fill="#1c231f" stroke="none"/>
       <circle cx="3" cy="-4" r="1" fill="#1c231f" stroke="none"/>
       <circle cx="1" cy="0" r="0.9" fill="#1c231f" stroke="none"/>
     </g>
-    <!-- castle (tabletop) -->
-    <g transform="translate(130,28)">
+    <g transform="translate(130,28)"> <!-- castle -->
       <path d="M-14,10 L-14,-4 L-10,-4 L-10,-8 L-6,-8 L-6,-4 L-2,-4 L-2,-8 L2,-8 L2,-4 L6,-4 L6,-8 L10,-8 L10,-4 L14,-4 L14,10 Z"/>
       <rect x="-4" y="0" width="8" height="10"/>
     </g>
-    <!-- meeple (tabletop) -->
-    <g transform="translate(182,18) rotate(6)">
+    <g transform="translate(182,18) rotate(6)"> <!-- meeple -->
       <circle cx="0" cy="-8" r="3.2" fill="#3a423c" stroke="none"/>
       <path d="M-7,10 L-4,-3 L-1,0 L1,0 L4,-3 L7,10 L4,10 L2,2 L2,10 L-2,10 L-2,2 L-4,10 Z" fill="#3a423c" stroke="none"/>
     </g>
-    <!-- handheld console (games) -->
-    <g transform="translate(232,22) rotate(-3)">
+    <g transform="translate(232,22) rotate(-3)"> <!-- handheld -->
       <rect x="-7" y="-14" width="14" height="26" rx="2.5"/>
       <rect x="-4.5" y="-11" width="9" height="7" rx="0.5"/>
       <circle cx="-2" cy="3" r="1.2" fill="#3a423c" stroke="none"/>
       <circle cx="2.4" cy="5" r="1.2" fill="#3a423c" stroke="none"/>
       <circle cx="-3.5" cy="7" r="0.9" fill="#3a423c" stroke="none"/>
     </g>
-    <!-- treasure chest (tabletop) -->
-    <g transform="translate(284,26)">
+    <g transform="translate(284,26)"> <!-- treasure chest -->
       <rect x="-12" y="0" width="24" height="10" rx="1.5"/>
       <path d="M-12,0 Q-12,-9 0,-9 Q12,-9 12,0 Z"/>
       <rect x="-2.5" y="-2" width="5" height="5" rx="1"/>
     </g>
 
-    <!-- row 2 -->
-    <!-- skull (books/fantasy) -->
-    <g transform="translate(24,92) rotate(5)">
+    <!-- row 1.5: small fillers in the gap -->
+    <use href="#star" transform="translate(50,46) scale(0.8)"/>
+    <use href="#heart" transform="translate(100,54) scale(0.9) rotate(-8)"/>
+    <use href="#gem" transform="translate(155,48) scale(0.85)"/>
+    <use href="#shield" transform="translate(206,52) scale(0.8) rotate(6)"/>
+    <use href="#star" transform="translate(258,46) scale(0.7) rotate(20)"/>
+    <use href="#gem" transform="translate(10,56) scale(0.6)"/>
+    <use href="#heart" transform="translate(308,50) scale(0.7)"/>
+
+    <!-- row 2: main icons -->
+    <g transform="translate(24,92) rotate(5)"> <!-- skull -->
       <path d="M-8,-2 Q-8,-11 0,-11 Q8,-11 8,-2 Q8,3 5,4 L5,7 L-5,7 L-5,4 Q-8,3 -8,-2 Z"/>
       <circle cx="-3.5" cy="-2" r="2" fill="#1c231f" stroke="none"/>
       <circle cx="3.5" cy="-2" r="2" fill="#1c231f" stroke="none"/>
       <path d="M-1.3,1.5 L0,4 L1.3,1.5 Z" fill="#1c231f" stroke="none"/>
     </g>
-    <!-- d20 (tabletop) -->
-    <g transform="translate(78,88)">
+    <g transform="translate(78,88)"> <!-- d20 -->
       <polygon points="0,-11 9,-5 9,5 0,11 -9,5 -9,-5"/>
       <line x1="0" y1="-11" x2="0" y2="11"/>
       <line x1="-9" y1="-5" x2="9" y2="5"/>
       <line x1="9" y1="-5" x2="-9" y2="5"/>
     </g>
-    <!-- sword (games/books) -->
-    <g transform="translate(124,90) rotate(-28)">
+    <g transform="translate(124,90) rotate(-28)"> <!-- sword -->
       <line x1="0" y1="-14" x2="0" y2="6"/>
       <path d="M-2,-14 L2,-14 L0,-18 Z" fill="#3a423c" stroke="none"/>
       <line x1="-5" y1="5" x2="5" y2="5"/>
       <line x1="0" y1="5" x2="0" y2="11"/>
       <circle cx="0" cy="12" r="1.4" fill="#3a423c" stroke="none"/>
     </g>
-    <!-- mug (cosy) -->
-    <g transform="translate(170,92)">
+    <g transform="translate(170,92)"> <!-- mug -->
       <path d="M-7,-6 L-7,8 Q-7,10 -5,10 L5,10 Q7,10 7,8 L7,-6 Z"/>
       <path d="M7,-3 Q13,-3 13,2 Q13,7 7,6"/>
       <line x1="-3" y1="-9" x2="-2" y2="-11"/>
       <line x1="1" y1="-9" x2="2" y2="-11"/>
     </g>
-    <!-- ghost (games, generic) -->
-    <g transform="translate(216,88)">
+    <g transform="translate(216,88)"> <!-- ghost -->
       <path d="M-8,8 L-8,-2 Q-8,-11 0,-11 Q8,-11 8,-2 L8,8 L5,5 L2,8 L-2,5 L-5,8 Z"/>
       <circle cx="-3" cy="-3" r="1.3" fill="#1c231f" stroke="none"/>
       <circle cx="3" cy="-3" r="1.3" fill="#1c231f" stroke="none"/>
     </g>
-    <!-- pixel alien (games, generic retro arcade trope, not any one sprite) -->
-    <g transform="translate(266,90)" shape-rendering="crispEdges">
+    <g transform="translate(266,90)" shape-rendering="crispEdges"> <!-- pixel alien -->
       <rect x="-6" y="-10" width="12" height="4" fill="#3a423c" stroke="none"/>
       <rect x="-9" y="-6" width="18" height="4" fill="#3a423c" stroke="none"/>
       <rect x="-9" y="-2" width="4" height="4" fill="#1c231f" stroke="none"/>
@@ -100,9 +105,20 @@
       <rect x="3" y="2" width="6" height="4" fill="#3a423c" stroke="none"/>
     </g>
 
-    <!-- row 3 -->
-    <!-- dice (tabletop) -->
-    <g transform="translate(40,155) rotate(-8)">
+    <!-- row 2.5: small fillers -->
+    <use href="#heart" transform="translate(50,118) scale(0.8)"/>
+    <use href="#star" transform="translate(98,113) scale(0.9) rotate(15)"/>
+    <use href="#gem" transform="translate(148,120) scale(0.7) rotate(-10)"/>
+    <use href="#shield" transform="translate(198,115) scale(0.7)"/>
+    <use href="#star" transform="translate(244,120) scale(0.8) rotate(-15)"/>
+    <g transform="translate(292,116) scale(0.55)"> <!-- mini mushroom -->
+      <path d="M-10,2 A10,8 0 0 1 10,2 Z" fill="#3a423c" stroke="none"/>
+      <rect x="-4" y="2" width="8" height="9" rx="2"/>
+    </g>
+    <use href="#gem" transform="translate(5,110) scale(0.55)"/>
+
+    <!-- row 3: main icons -->
+    <g transform="translate(40,155) rotate(-8)"> <!-- dice -->
       <rect x="-9" y="-9" width="18" height="18" rx="3"/>
       <circle cx="-4" cy="-4" r="1.3" fill="#3a423c" stroke="none"/>
       <circle cx="4" cy="-4" r="1.3" fill="#3a423c" stroke="none"/>
@@ -110,21 +126,32 @@
       <circle cx="-4" cy="4" r="1.3" fill="#3a423c" stroke="none"/>
       <circle cx="4" cy="4" r="1.3" fill="#3a423c" stroke="none"/>
     </g>
-    <!-- book (books) -->
-    <g transform="translate(112,158)">
+    <g transform="translate(112,158)"> <!-- book -->
       <path d="M0,-8 L-13,-5 L-13,9 L0,6 L13,9 L13,-5 Z"/>
       <line x1="0" y1="-8" x2="0" y2="6"/>
     </g>
-    <!-- tv (telly) -->
-    <g transform="translate(182,150) rotate(3)">
+    <g transform="translate(182,150) rotate(3)"> <!-- tv -->
       <rect x="-12" y="-8" width="24" height="16" rx="2"/>
       <line x1="-3" y1="-8" x2="-8" y2="-14"/>
       <line x1="3" y1="-8" x2="8" y2="-14"/>
     </g>
-    <!-- ticket (movies) -->
-    <g transform="translate(252,152) rotate(-8)">
+    <g transform="translate(252,152) rotate(-8)"> <!-- ticket -->
       <rect x="-12" y="-6" width="24" height="12" rx="2"/>
       <line x1="-2" y1="-6" x2="-2" y2="6" stroke-dasharray="1.6,1.6"/>
+    </g>
+
+    <!-- row 3.5 / bottom edge fillers, and top edge fillers for density -->
+    <use href="#star" transform="translate(75,178) scale(0.8) rotate(10)"/>
+    <use href="#heart" transform="translate(150,182) scale(0.8)"/>
+    <use href="#gem" transform="translate(220,180) scale(0.75) rotate(-12)"/>
+    <use href="#shield" transform="translate(292,172) scale(0.7)"/>
+    <use href="#star" transform="translate(12,180) scale(0.6)"/>
+    <use href="#star" transform="translate(8,6) scale(0.6) rotate(30)"/>
+    <use href="#heart" transform="translate(310,10) scale(0.6)"/>
+    <use href="#gem" transform="translate(160,8) scale(0.6)"/>
+    <g transform="translate(305,150) rotate(-10) scale(0.6)"> <!-- mini dice -->
+      <rect x="-9" y="-9" width="18" height="18" rx="3"/>
+      <circle cx="0" cy="0" r="1.3" fill="#3a423c" stroke="none"/>
     </g>
   </g>
 </svg>
