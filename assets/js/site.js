@@ -201,13 +201,39 @@
     var src = canvas.dataset.photo;
     if (src) {
       var cached = photoCache[src];
-      if (cached && cached.complete) {
+      if (cached && cached.complete && !cached.__failed) {
         paintPhotoPanel(canvas, ctx, w, h, cached);
+      } else if (cached && cached.__failed) {
+        // Already tried and failed for this src - don't hammer a dead
+        // request forever, just show the gradient placeholder.
+        paintIllustration(canvas, ctx, w, h);
       } else {
-        var img = cached || new Image();
-        photoCache[src] = img;
-        img.onload = function () { paint(canvas); };
-        if (!cached) img.src = src;
+        var img = cached;
+        if (!img) {
+          // First canvas to ask for this src creates and loads the image.
+          img = new Image();
+          photoCache[src] = img;
+          img.addEventListener('error', function onErr() {
+            // A dropped connection or flaky network blip used to mean the
+            // real photo never showed up at all, just the placeholder
+            // forever with no second attempt. Retry once before giving up.
+            if (img.__retried) {
+              img.__failed = true;
+              paintAll();
+              return;
+            }
+            img.__retried = true;
+            setTimeout(function () { img.src = src; }, 1500);
+          });
+          img.src = src;
+        }
+        // addEventListener, not img.onload = ..., because more than one
+        // canvas can share the same src (a hero and its duplicate grid
+        // card, say) - a plain property assignment only keeps the last
+        // canvas's callback and silently drops every earlier one, which
+        // used to leave whichever canvas asked first stuck on the
+        // placeholder forever even though the image loaded fine.
+        img.addEventListener('load', function () { paint(canvas); });
         paintIllustration(canvas, ctx, w, h);
       }
       return;
