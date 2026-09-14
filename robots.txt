@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pantsbooger.github.io/continue-site/sitemap.xml
+Sitemap: https://continueyesno.co.uk/sitemap.xml
