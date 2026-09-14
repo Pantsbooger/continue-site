@@ -1,7 +1,12 @@
 // Homepage-only: search, genre filter and sort for the "Also this week"
-// card grid. The hero article is a fixed editorial pick and isn't part of
-// this, only the cards are. Pure client-side, no backend, since the whole
-// site has no build step or server.
+// card grid. The big featured hero above the grid is a fixed editorial pick
+// for the unfiltered "All" view only. Its article also has a normal card in
+// the grid (marked data-hero-dup="true") so genre filters that only match
+// the hero's own article - e.g. Telly right now, since the hero is the only
+// Telly piece - still show something instead of "nothing matches". That
+// duplicate card is hidden specifically on the "All" view, where the hero
+// already covers it. Pure client-side, no backend, since the whole site has
+// no build step or server.
 (function () {
   var grid = document.getElementById('cards-grid');
   if (!grid) return;
@@ -32,12 +37,10 @@
 
   function syncHero(genre) {
     if (!hero) return;
-    // The hero is the site's single editorial pick and isn't duplicated as a
-    // card in the grid below, so it only belongs on the unfiltered "All"
-    // view. Showing it under a specific genre filter used to look like a
-    // bug: pick a genre that happens to match the hero's own genre, and
-    // you'd see the hero plus a "nothing matches" message in the same
-    // breath, because the grid genuinely has no card for it.
+    // The big featured treatment is only for the unfiltered "All" view -
+    // every other view shows its article as a normal card instead (see the
+    // data-hero-dup card below), so nothing gets the oversized treatment
+    // twice and nothing gets left out.
     hero.style.display = genre === 'all' ? '' : 'none';
   }
 
@@ -50,7 +53,10 @@
     cards.forEach(function (card) {
       var matchesQuery = !query || cardText(card).indexOf(query) !== -1;
       var matchesGenre = genre === 'all' || card.dataset.genre === genre;
-      var show = matchesQuery && matchesGenre;
+      // On "All", the hero above already covers its own article in full
+      // size, so skip the duplicate small card for it there.
+      var isHiddenHeroDup = genre === 'all' && card.dataset.heroDup === 'true';
+      var show = matchesQuery && matchesGenre && !isHiddenHeroDup;
       card.style.display = show ? '' : 'none';
       if (show) visibleCount++;
     });
