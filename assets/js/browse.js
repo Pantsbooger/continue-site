@@ -32,9 +32,13 @@
 
   function syncHero(genre) {
     if (!hero) return;
-    var heroGenre = hero.dataset.genre;
-    var show = genre === 'all' || !heroGenre || genre === heroGenre;
-    hero.style.display = show ? '' : 'none';
+    // The hero is the site's single editorial pick and isn't duplicated as a
+    // card in the grid below, so it only belongs on the unfiltered "All"
+    // view. Showing it under a specific genre filter used to look like a
+    // bug: pick a genre that happens to match the hero's own genre, and
+    // you'd see the hero plus a "nothing matches" message in the same
+    // breath, because the grid genuinely has no card for it.
+    hero.style.display = genre === 'all' ? '' : 'none';
   }
 
   function apply() {
