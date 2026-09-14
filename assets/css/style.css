@@ -117,7 +117,8 @@ img, svg { max-width: 100%; display: block; }
 /* Masthead is deliberately always dark, independent of the light/dark
    theme tokens below, so it reads as a fixed brand banner either way. */
 .masthead {
-  background: #1c231f;
+  background: #1c231f url('../images/masthead-pattern.svg') repeat;
+  background-size: 220px 160px;
   border-bottom: 1px solid #1c231f;
 }
 .masthead .wrap {
