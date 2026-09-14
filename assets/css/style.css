@@ -230,12 +230,7 @@ img, svg { max-width: 100%; display: block; }
 .cards { padding: 1rem 0 3rem; }
 .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; }
 @media (max-width: 900px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) {
-  .cards-grid { grid-template-columns: 1fr; }
-  /* cards go full-width at this point, so the fixed 1.2rem headline sized
-     for a four-column grid reads too small next to the hero; scale it up */
-  .card h3 { font-size: 1.45rem; line-height: 1.24; }
-}
+@media (max-width: 560px) { .cards-grid { grid-template-columns: 1fr; } }
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
@@ -279,6 +274,13 @@ img, svg { max-width: 100%; display: block; }
 }
 .card p.dek { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.5; }
 .card a.card-link { text-decoration: none; }
+/* cards go full-width once the grid drops to one column, so the 1.2rem
+   headline sized for a four-column grid reads too small; scale it up.
+   (Must come after the base .card h3 rule above: same specificity, so
+   whichever is later in the file wins regardless of the media query.) */
+@media (max-width: 560px) {
+  .card h3 { font-size: 1.45rem; line-height: 1.24; }
+}
 
 /* ---------- deals strip ---------- */
 .deals-strip {
