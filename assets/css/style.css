@@ -381,6 +381,25 @@ footer nav a:hover { color: var(--ink); }
 .prose li:last-child { margin-bottom: 0; }
 .prose strong { font-weight: 800; }
 
+/* ---------- verdict box (reviews only) ---------- */
+.verdict {
+  margin: 2.5rem 0; padding: 1.6rem 1.75rem;
+  border: 2px solid var(--amber); border-radius: 10px;
+  background: var(--paper-raised);
+}
+.verdict-question {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.68rem; letter-spacing: 0.02em; text-transform: uppercase;
+  line-height: 1.7; color: var(--ink-soft); margin: 0 0 0.85rem;
+}
+.verdict-answer {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.7rem; line-height: 1; margin: 0 0 0.75rem;
+}
+.verdict-answer.yes { color: var(--amber); }
+.verdict-answer.no { color: var(--brick); }
+.verdict-reason { font-size: 0.94rem; line-height: 1.55; color: var(--ink); margin: 0; }
+
 .end-note {
   display: flex; align-items: center; gap: 0.7rem; padding-top: 1.75rem;
   border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--ink-soft);
